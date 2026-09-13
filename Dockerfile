@@ -1,5 +1,6 @@
 # MiniMax H3 Text-to-Video (ComfyUI) for RunPod Serverless with Volume Storage
 # Using PyTorch 2.5.1 for comfy_kitchen compatibility
+# Build: 2026-09-14-v2 (force rebuild)
 FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
