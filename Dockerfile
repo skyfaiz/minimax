@@ -1,5 +1,6 @@
 # MiniMax H3 Text-to-Video (ComfyUI) for RunPod Serverless with Volume Storage
-FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+# Using PyTorch 2.5.1 for comfy_kitchen compatibility
+FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PIP_NO_CACHE_DIR=1 \
@@ -22,14 +23,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --upgrade pip && \
     pip install packaging psutil ninja && \
     pip install --upgrade accelerate && \
-    pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1%2Bcu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl" && \
+    pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.2.post1/flash_attn-2.7.2.post1%2Bcu12torch2.5cxx11abiFALSE-cp311-cp311-linux_x86_64.whl" && \
     pip install -U "huggingface_hub[hf_transfer]" hf_xet hf_transfer && \
     pip install runpod websocket-client Pillow
 
-# Hugging Face environment variables
-ENV HF_HOME=/tmp/hf_home \
-    HUGGINGFACE_HUB_CACHE=/tmp/hf_home/hub \
-    HF_HUB_CACHE=/tmp/hf_home/hub \
+# Hugging Face environment variables - use volume for cache to avoid disk space issues
+ENV HF_HOME=/runpod-volume/hf_cache \
+    HUGGINGFACE_HUB_CACHE=/runpod-volume/hf_cache/hub \
+    HF_HUB_CACHE=/runpod-volume/hf_cache/hub \
     HF_HUB_DISABLE_XET=0 \
     HF_XET_HIGH_PERFORMANCE=1 \
     HF_HUB_ENABLE_HF_TRANSFER=1 \
