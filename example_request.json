@@ -1,0 +1,14 @@
+{
+  "input": {
+    "prompt": "Realistic live-action cinematic look, action movie trailer: a post-rain dusk metropolis, anamorphic lens, shallow depth of field, film grain.\n\n[0s-5s] A runner leaps across rooftops as pursuers close in. No text, no watermark.",
+    "duration": 5,
+    "fps": 24,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": 0.4,
+    "multiple": 32,
+    "seed": 556589502035082,
+    "turbo_mode": true,
+    "scheduler": "simple",
+    "sampler_name": "res_multistep"
+  }
+}

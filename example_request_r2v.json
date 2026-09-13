@@ -1,0 +1,20 @@
+{
+  "input": {
+    "mode": "r2v",
+    "prompt": "A woman walks through a sunlit market, cinematic camera follow, natural motion, film grain. No text, no watermark.",
+    "reference_images": [
+      "https://example.com/person_ref_1.jpg",
+      "https://example.com/person_ref_2.jpg"
+    ],
+    "duration": 5,
+    "fps": 24,
+    "aspect_ratio": "16:9 (Widescreen)",
+    "megapixels": 0.8,
+    "turbo_mode": true,
+    "realism_lora": false,
+    "loras": [
+      {"name": "iggon_h3_doggy.safetensors", "strength": 0.8}
+    ],
+    "seed": 42
+  }
+}

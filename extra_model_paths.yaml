@@ -1,0 +1,29 @@
+comfyui:
+    base_path: /ComfyUI/
+    is_default: true
+    checkpoints: |
+        models/checkpoints/
+        /runpod-volume/checkpoints/
+    clip: |
+        models/clip/
+        /runpod-volume/text_encoders/
+    text_encoders: |
+        models/text_encoders/
+        /runpod-volume/text_encoders/
+    diffusion_models: |
+        models/diffusion_models/
+        models/unet/
+        /runpod-volume/models/
+        /runpod-volume/diffusion_models/
+    loras: |
+        models/loras/
+        /runpod-volume/loras/
+        /runpod-volume/models/loras/
+        /runpod-volume/minimax-h3/loras/
+        /workspace/loras/
+    vae: |
+        models/vae/
+        /runpod-volume/vae/
+    latent_upscale_models: |
+        models/latent_upscale_models/
+        /runpod-volume/latent_upscale_models/

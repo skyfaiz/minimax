@@ -1,0 +1,18 @@
+{
+  "title": "H3_Minimax_Runpod_Serverless",
+  "description": "MiniMax H3 T2V / I2V / R2V on RunPod Serverless (ComfyUI). Turbo baked; realism + any Hugging Face LoRA via download URL + hf_token.",
+  "type": "serverless",
+  "category": "video",
+  "iconUrl": "https://github.com/wlsdml1114/Engui_Studio/blob/main/assets/logo.png?raw=true",
+
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 200,
+    "gpuCount": 1,
+    "gpuIds": "ADA_48_PRO,ADA_48,A100_80,A40",
+    "allowedCudaVersions": [
+      "12.8",
+      "12.6"
+    ]
+  }
+}

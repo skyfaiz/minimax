@@ -1,0 +1,13 @@
+{
+  "input": {
+    "mode": "i2v",
+    "image_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/transparent_rgb_gaming_mouse.png",
+    "prompt": "Editorial tech product film. Keep the subject from image 1 in a dark studio with blue and orange rim lighting. Slow orbit, soft neon rim light. Audio: soft sub-bass. No text, no watermark.",
+    "duration": 5,
+    "fps": 24,
+    "megapixels": 0.4,
+    "turbo_mode": true,
+    "turbo_model_strength": 1.0,
+    "seed": 42
+  }
+}

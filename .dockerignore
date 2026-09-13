@@ -1,0 +1,13 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+.env
+*.mp4
+*.png
+*.jpg
+examples/output/*
+!examples/output/.gitkeep
+examples/input/*
+!examples/input/.gitkeep
+!examples/input/README.md

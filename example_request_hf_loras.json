@@ -1,0 +1,16 @@
+{
+  "input": {
+    "mode": "i2v",
+    "image_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/transparent_rgb_gaming_mouse.png",
+    "prompt": "Editorial tech product film. Keep the subject from image 1 in a dark studio with blue and orange rim lighting. Slow orbit, soft neon rim light. Audio: soft sub-bass. No text, no watermark.",
+    "duration": 5,
+    "fps": 24,
+    "megapixels": 0.4,
+    "turbo_mode": true,
+    "realism_lora": true,
+    "hf_token": "hf_REPLACE_ME",
+    "lora_url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors",
+    "lora_strength": 0.8,
+    "seed": 42
+  }
+}

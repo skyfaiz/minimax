@@ -1,0 +1,4 @@
+# Requirements for H3 Minimax Client Tools
+# Install with: pip install -r requirements_client.txt
+
+requests>=2.31.0
