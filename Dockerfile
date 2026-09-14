@@ -1,6 +1,6 @@
 # MiniMax H3 Text-to-Video (ComfyUI) for RunPod Serverless with Volume Storage
 # Using PyTorch 2.5.1 for comfy_kitchen compatibility
-# Build: 2026-09-14-v4 (pin PyTorch after ComfyUI install)
+# Build: 2026-09-14-v5 (force-reinstall PyTorch without CUDA index)
 FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -43,7 +43,7 @@ WORKDIR /opt
 RUN git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git && \
     cd /opt/ComfyUI && \
     pip install -r requirements.txt && \
-    pip install torch==2.5.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 && \
+    pip install --force-reinstall --no-cache-dir torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 && \
     rm -rf /opt/ComfyUI/.git
 
 # Install ComfyUI custom nodes
